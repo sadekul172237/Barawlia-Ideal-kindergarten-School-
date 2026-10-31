@@ -1,0 +1,233 @@
+
+/* ===== Class Activities CSS ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 15px;
+}
+
+/* শ্রেণিগুলোর গ্রিড */
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+/* প্রতিটি শ্রেণির কার্ড */
+.class-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 155px;
+    padding: 22px 12px;
+
+    background: linear-gradient(135deg, #ffffff, #eaf8f0);
+    color: #087443;
+
+    text-decoration: none;
+    text-align: center;
+
+    border: 1px solid #cde8d7;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+/* কার্ডের আইকন */
+.class-card .number {
+    font-size: 38px;
+    line-height: 1.2;
+    transition: transform 0.3s ease;
+}
+
+/* শ্রেণির নাম */
+.class-card h2 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* মাউস দিয়ে কার্ডের ওপর গেলে */
+@media (hover: hover) {
+    .class-card:hover {
+        background: linear-gradient(135deg, #087443, #0aa663);
+        color: #ffffff;
+        transform: translateY(-7px);
+        box-shadow: 0 12px 25px rgba(8, 116, 67, 0.22);
+    }
+
+    .class-card:hover .number {
+        transform: scale(1.15);
+    }
+}
+
+/* ক্লিক বা টাচ করলে */
+.class-card:active {
+    transform: scale(0.97);
+}
+
+/* কিবোর্ড দিয়ে নির্বাচন করলে */
+.class-card:focus-visible {
+    outline: 3px solid #f4b400;
+    outline-offset: 4px;
+}
+
+/* ট্যাবলেট */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 12px;
+    }
+
+    .class-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .class-card {
+        min-height: 135px;
+        padding: 18px 8px;
+        border-radius: 12px;
+    }
+
+    .class-card .number {
+        font-size: 32px;
+    }
+
+    .class-card h2 {
+        font-size: 15px;
+    }
+}
+
+/* ছোট মোবাইল */
+@media (max-width: 400px) {
+    .class-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .class-card {
+        min-height: 120px;
+    }
+
+    .class-card h2 {
+        font-size: 14px;
+    }
+}
+
+/* অ্যানিমেশন কমাতে পছন্দ করেন এমন ব্যবহারকারীদের জন্য */
+@media (prefers-reduced-motion: reduce) {
+    .class-card,
+    .class-card .number {
+        transition: none;
+    }
+}
+
+/* Play page layout fix */
+
+.page-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.class-header {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+.info-card {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 18px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    overflow-wrap: anywhere;
+}
+
+.info-card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #087443;
+}
+
+.info-card ul {
+    padding-left: 24px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.photo-grid img {
+    width: 100%;
+    max-width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+    .page-container {
+        padding: 12px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 15px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .photo-grid img {
+        height: 130px;
+    }
+}
+

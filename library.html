@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল — ডিজিটাল লাইব্রেরি">
+  <meta name="theme-color" content="#0d5d4a">
+  <title>ডিজিটাল লাইব্রেরি | বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+<div class="topbar"><div class="container topbar-inner"><span>বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</span><span>🔴 Contact: 01819-626704, 01603-107880 </span></div></div>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="index.html" aria-label="হোমপেজ">
+    <span class="brand-logo"><!-- 🔴 EDIT HERE: Replace school-logo.png with your official logo -->
+      <img src="Image1.jpg" alt="স্কুলের লোগো" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <span class="logo-fallback" style="display:none">🔴<small>logo.png</small></span></span>
+    <span class="brand-text"><strong>বার আউলিয়া আইডিয়াল</strong><small>কিন্ডারগার্টেন এন্ড স্কুল</small></span>
+  </a>
+   
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">☰ <span>মেনু</span></button>
+  <nav class="main-nav" id="main-nav" aria-label="প্রধান নেভিগেশন">
+        <a href="index.html" aria-current="page">হোম</a>
+        <a href="about.html">পরিচিতি</a>
+        <a href="academics.html">একাডেমিক</a>
+        <a href="admission.html">ভর্তি</a>
+        <a href="notices.html">নোটিশ</a>
+        <a href="routine.html">রুটিন</a>
+        <a href="results.html">ফলাফল</a>
+        <a href="library.html">লাইব্রেরি</a>
+        <a href="gallery.html">গ্যালারি</a>
+        <a href="fees.html">ফি</a>
+        <a href="teachers.html">শিক্ষক পরিচিতি </a>
+        <a href="contact.html">যোগাযোগ</a>
+  </nav>
+</div></header><main id="main">
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+
+    header {
+      background: #075e46;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 25px;
+    }
+
+    header p {
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    nav {
+      background: #064e3b;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .container {
+      width: 94%;
+      max-width: 1100px;
+      margin: 25px auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .intro h2 {
+      color: #075e46;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: white;
+      font-size: 16px;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .book-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 12px #00000010;
+      border-top: 4px solid #0d9470;
+    }
+
+    .book-icon {
+      font-size: 35px;
+    }
+
+    .book-card h3 {
+      margin: 12px 0;
+      color: #075e46;
+    }
+
+    .book-card p {
+      line-height: 1.8;
+      color: #475569;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #087f5b;
+      color: white;
+      padding: 11px 14px;
+      margin-top: 8px;
+      border-radius: 7px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #065f46;
+    }
+
+    .secondary {
+      background: #1d4ed8;
+    }
+
+    .secondary:hover {
+      background: #1e40af;
+    }
+
+    .notice {
+      background: #fff7d6;
+      padding: 16px;
+      border-radius: 8px;
+      line-height: 1.9;
+      margin-top: 25px;
+    }
+
+    .official {
+      text-align: center;
+      margin: 30px 0;
+      padding: 25px;
+      background: #e0f2fe;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: #064e3b;
+      color: white;
+      text-align: center;
+      padding: 20px 12px;
+      line-height: 1.8;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</h1>
+  <p>ডিজিটাল লাইব্রেরি</p>
+  <p>পাঠ্যবই পড়ুন, জ্ঞান অর্জন করুন</p>
+</header>
+
+
+
+<main class="container">
+
+  <section class="intro">
+    <h2>📚 আমাদের ডিজিটাল লাইব্রেরি</h2>
+    <p>শ্রেণি নির্বাচন করে আপনার প্রয়োজনীয় পাঠ্যবই খুঁজুন।</p>
+  </section>
+
+  <section class="controls">
+    <select id="classSelect" aria-label="শ্রেণি নির্বাচন">
+      <option value="all">সকল শ্রেণি</option>
+      <option value="প্রাক-প্রাথমিক">প্রাক-প্রাথমিক</option>
+      <option value="১ম">প্রথম শ্রেণি</option>
+      <option value="২য়">দ্বিতীয় শ্রেণি</option>
+      <option value="৩য়">তৃতীয় শ্রেণি</option>
+      <option value="৪র্থ">চতুর্থ শ্রেণি</option>
+      <option value="৫ম">পঞ্চম শ্রেণি</option>
+      <option value="৬ষ্ঠ">ষষ্ঠ শ্রেণি</option>
+      <option value="৭ম">সপ্তম শ্রেণি</option>
+      <option value="৮ম">অষ্টম শ্রেণি</option>
+      <option value="৯ম-১০ম">নবম-দশম শ্রেণি</option>
+    </select>
+
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="বই বা বিষয়ের নাম লিখুন..."
+      aria-label="বই খুঁজুন"
+    >
+  </section>
+ 
+ 
+
+  <section id="bookGrid" class="book-grid">
+
+    <!-- বইয়ের কার্ডগুলো JavaScript দিয়ে তৈরি হবে -->
+
+  </section>
+
+  <section id="noResults" class="notice hidden">
+    দুঃখিত! আপনার অনুসন্ধানের সঙ্গে মেলে এমন কোনো বই পাওয়া যায়নি।
+  </section>
+ <section class="notice">
+    <strong>গুরুত্বপূর্ণ তথ্য:</strong>
+    
+
+  <section class="official">
+    <h2>🏛️ NCTB-এর অফিসিয়াল পাঠ্যবই</h2>
+    <p>
+      এখানে গিয়ে শিক্ষাবর্ষ, শ্রেণি এবং বিষয় অনুযায়ী বই নির্বাচন করুন।
+    </p>
+
+    <a
+      class="btn secondary"
+      href="https://nctb.gov.bd/pages/static-pages/695b98afc4774958d7b7044c"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      NCTB বইয়ের তালিকা দেখুন
+    </a>
+
+    <br>
+
+    <a
+      class="btn"
+      href="https://nctb.gov.bd/pages/ebooks/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      NCTB ই-বুক বিভাগ
+    </a>
+  </section>
+
+  
+</main>
+
+<footer>
+  <p>বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</p>
+  <p>ডিজিটাল লাইব্রেরি | শিক্ষাই শক্তি</p>
+</footer>
+
+<script>
+  // =========================================
+  // বই যোগ করার জায়গা
+  // pdf: এখানে বইয়ের প্রকৃত PDF URL বসাবেন।
+  // আপাতত pdf ফাঁকা রাখা হয়েছে, তাই কার্ডে
+  // NCTB-এর অফিসিয়াল তালিকা খোলার বাটন দেখাবে।
+  // =========================================
+
+  const books = [
+    {
+      title: "আমার বাংলা বই",
+      subject: "বাংলা",
+      className: "১ম",
+      year: "২০২৬",
+      pdf: "https://drive.google.com/file/d/1hf-W5GVlAy3cHstFlozNBuE2oz7u9YXy/view"
+    },
+    {
+      title: "English for Today",
+      subject: "ইংরেজি",
+      className: "১ম",
+      year: "২০২৬",
+      pdf: "https://drive.google.com/file/d/1UX9fbOBUKrf3mMh6E0I-Gw2emoQV-XWy/view"
+    },
+    {
+      title: "প্রাথমিক গণিত",
+      subject: "গণিত",
+      className: "১ম",
+      year: "২০২৬",
+      pdf: "https://drive.google.com/file/d/1V5eBwsQYrG-6qajVZUwwetml5Oezl10r/view"
+    },
+    {
+      title: "আমার বাংলা বই",
+      subject: "বাংলা",
+      className: "২য়",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "English for Today",
+      subject: "ইংরেজি",
+      className: "২য়",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "প্রাথমিক গণিত",
+      subject: "গণিত",
+      className: "২য়",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "পাঠ্যবইয়ের তালিকা",
+      subject: "সকল বিষয়",
+      className: "৩য়",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "পাঠ্যবইয়ের তালিকা",
+      subject: "সকল বিষয়",
+      className: "৪র্থ",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "পাঠ্যবইয়ের তালিকা",
+      subject: "সকল বিষয়",
+      className: "৫ম",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "পাঠ্যবইয়ের তালিকা",
+      subject: "সকল বিষয়",
+      className: "৬ষ্ঠ",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "পাঠ্যবইয়ের তালিকা",
+      subject: "সকল বিষয়",
+      className: "৭ম",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "পাঠ্যবইয়ের তালিকা",
+      subject: "সকল বিষয়",
+      className: "৮ম",
+      year: "২০২৬",
+      pdf: ""
+    },
+    {
+      title: "পাঠ্যবইয়ের তালিকা",
+      subject: "সকল বিষয়",
+      className: "৯ম-১০ম",
+      year: "২০২৬",
+      pdf: ""
+    }
+  ];
+
+  const officialList =
+    "https://nctb.gov.bd/pages/static-pages/695b98afc4774958d7b7044c";
+
+  const classSelect = document.getElementById("classSelect");
+  const searchInput = document.getElementById("searchInput");
+  const bookGrid = document.getElementById("bookGrid");
+  const noResults = document.getElementById("noResults");
+
+  function renderBooks() {
+    const selectedClass = classSelect.value;
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    const filteredBooks = books.filter(book => {
+      const matchesClass =
+        selectedClass === "all" ||
+        book.className === selectedClass;
+
+      const searchableText =
+        `${book.title} ${book.subject} ${book.className} ${book.year}`
+          .toLowerCase();
+
+      return matchesClass && searchableText.includes(searchTerm);
+    });
+
+    bookGrid.innerHTML = "";
+
+    noResults.classList.toggle("hidden", filteredBooks.length > 0);
+
+    filteredBooks.forEach(book => {
+      const card = document.createElement("article");
+      card.className = "book-card";
+
+      const title = document.createElement("h3");
+      title.textContent = book.title;
+
+      const icon = document.createElement("div");
+      icon.className = "book-icon";
+      icon.textContent = "📘";
+
+      const details = document.createElement("p");
+      details.textContent =
+        `শ্রেণি: ${book.className} | বিষয়: ${book.subject} | শিক্ষাবর্ষ: ${book.year}`;
+
+      const link = document.createElement("a");
+      link.className = "btn";
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+
+      if (book.pdf.trim() !== "") {
+        link.href = book.pdf;
+        link.textContent = "PDF পড়ুন / ডাউনলোড";
+      } else {
+        link.href = officialList;
+        link.textContent = "NCTB-তে বই দেখুন";
+      }
+
+      card.append(icon, title, details, link);
+      bookGrid.appendChild(card);
+    });
+  }
+
+  classSelect.addEventListener("change", renderBooks);
+  searchInput.addEventListener("input", renderBooks);
+
+  renderBooks();
+</script>
+
+</body>
+</html>
+  </main>
+<footer class="site-footer"><div class="container footer-grid">
+  <div><div class="footer-brand">বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</div><p class="small muted"> </p></div>
+  <div><h3>যোগাযোগ:</h3><p>স্কুলের ঠিকানা:বক্তারপাড়া বার-আউলিয়া,সীতাকুণ্ড চট্টগ্রাম</p><p> যোগাযোগ : 01819-626704, 01603-107880</div>
+</div><div class="container footer-bottom"><span>© <span id="year"></span> বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</span><span><a href="terms.html">শর্তাবলি</a> · <a href="privacy.html">গোপনীয়তা নীতি</a></span></div></footer>
+<div class="developer-credit">
+    Designed & Developed by
+    <span>Sadekul Islam Shawon</span>
+    <small>Web Designer & Developer</small>
+</div></body></html>

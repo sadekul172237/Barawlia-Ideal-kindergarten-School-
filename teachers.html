@@ -1,0 +1,439 @@
+<!doctype html>
+<eyebrow lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল — হোম">
+  <meta name="theme-color" content="#0d5d4a">
+  <title>হোম | বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+  
+</head>
+<body>
+<a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+<div class="topbar"><div class="container topbar-inner"><span>বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</span><span>🔴 Contact: 01819-626704, 01603-107880 </span></div></div>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="index.html" aria-label="হোমপেজ">
+    <span class="brand-logo"><!-- 🔴 EDIT HERE: Replace school-logo.png with your official logo -->
+      <img src="Image1.jpg" alt="স্কুলের লোগো" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <span class="logo-fallback" style="display:none">🔴<small>logo.png</small></span></span>
+    <span class="brand-text"><strong>বার আউলিয়া আইডিয়াল</strong><small>কিন্ডারগার্টেন এন্ড স্কুল</small></span>
+  </a>
+   
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">☰ <span>মেনু</span></button>
+  <nav class="main-nav" id="main-nav" aria-label="প্রধান নেভিগেশন">
+        <a href="index.html" aria-current="page">হোম</a>
+        <a href="about.html">পরিচিতি</a>
+        <a href="academics.html">একাডেমিক</a>
+        <a href="admission.html">ভর্তি</a>
+        <a href="notices.html">নোটিশ</a>
+        <a href="routine.html">রুটিন</a>
+        <a href="results.html">ফলাফল</a>
+        <a href="library.html">লাইব্রেরি</a>
+        <a href="gallery.html">গ্যালারি</a>
+        <a href="fees.html">ফি</a>
+        <a href="teachers.html">শিক্ষক পরিচিতি </a>
+        <a href="contact.html">যোগাযোগ</a>
+  </nav>
+</div></header>
+<main id="main">
+  
+
+      <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Bengali", sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #075e46;
+            color: white;
+            text-align: center;
+            padding: 25px 12px;
+        }
+
+        header h1 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        nav {
+            background: #064e3b;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 25px 15px;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #075e46;
+            margin-bottom: 25px;
+        }
+
+        .teacher-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 12px #00000012;
+            padding-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* EDIT HERE: TEACHER PHOTO */
+        .teacher-photo {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #e2e8f0;
+            display: block;
+        }
+
+        .teacher-info {
+            padding: 15px;
+        }
+
+        /* EDIT HERE: TEACHER NAME */
+        .teacher-name {
+            color: #075e46;
+            font-size: 19px;
+            margin-bottom: 5px;
+        }
+
+        /* EDIT HERE: TEACHER DESIGNATION */
+        .teacher-designation {
+            color: #64748b;
+            margin-bottom: 14px;
+        }
+
+        .contact {
+            text-align: left;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        .contact a {
+            color: #0369a1;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 18px 10px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 21px;
+            }
+
+            .teacher-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .teacher-photo {
+                height: 170px;
+            }
+
+            .teacher-info {
+                padding: 10px;
+            }
+
+            .teacher-name {
+                font-size: 16px;
+            }
+
+            .teacher-designation,
+            .contact {
+                font-size: 12px;
+            }
+        }
+    </style>
+</he>
+
+
+           <main class="container">
+
+        <h2 class="page-title">আমাদের শিক্ষক-শিক্ষিকাবৃন্দ</h2>
+
+        <div class="teacher-grid">
+
+            <!-- TEACHER 01 -->
+            <div class="teacher-card">
+                <!-- EDIT HERE: PHOTO FILE -->
+                <img src="Ibrahim.jpg"
+                     alt="শিক্ষকের ছবি"
+                     class="teacher-photo">
+
+                <div class="teacher-info">
+                    <!-- EDIT HERE: NAME -->
+                    <h3 class="teacher-name">নাম: মো:ইব্রাহিম </h3>
+
+                    <!-- EDIT HERE: DESIGNATION -->
+                    <p class="teacher-designation">পদবি: প্রধান শিক্ষক </p>
+
+                    <div class="contact">
+                        <!-- EDIT HERE: PHONE -->
+                        <p>📞 <a href="tel:">ফোন:০১৮৫০-৭৯১৯৯৮</a></p>
+
+                        <!-- EDIT HERE: EMAIL -->
+                        <p>✉️ <a href="mailto:">ইমেইল: </a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 02 -->
+            <div class="teacher-card">
+                <img src="shuli.png"শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম:শিউলী সাহা</h3>
+                    <p class="teacher-designation">পদবি:সহকারী প্রধান শিক্ষিকা</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন নম্বর</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল ঠিকানা</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 03 -->
+            <div class="teacher-card">
+                <img src="jasmin.png" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম: জেসমিন আক্তার</h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষিকা (বাংলা)</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন:০১৮১৩১৭২৯২৭ </a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: akbarjasmin2000@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 04 -->
+            <div class="teacher-card">
+                <img src="image4.png" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম: খতিজা বেগম</h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষিকা</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন:০১৬২৫৭২০৭০৭</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: N/A </a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 05 -->
+            <div class="teacher-card">
+                <img src="Akash.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম: সাঈদুর রহমান</h3>
+                    <p class="teacher-designation">পদবি:সহকারী শিক্ষক (হিসাব বিজ্ঞান)</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন:০১৬৮২৫৬৯৫৬১</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: mdsayedur011gmail.com </a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 06 -->
+            <div class="teacher-card">
+                <img src="shawon.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম: সাদেকুল ইসলাম শাওন</h3>
+                    <p class="teacher-designation">পদবি:সহকারী শিক্ষক (বিজ্ঞান) </p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন: ০১৬১০১৬৭০৩৯</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: sadekulislam7475@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 07 -->
+            <div class="teacher-card">
+                <img src="nasima.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name"> নাম: নাছিমা আক্তার </h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষিকা (ইসলাম ধর্ম)</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন: ০১৯৪৫-৪০৪৮৮৪ </a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: eshahasan599@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 08 -->
+            <div class="teacher-card">
+                <img src="sarmin.png" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম: শারমিন আক্তার</h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষিকা</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন: ০১৬১০-২২৫৮৮৫  </a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: Sharminsamu008@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 09 -->
+            <div class="teacher-card">
+                <img src="sanjida.png" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম: সানজিদা আক্তার</h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষিকা</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন: ০১৬২৫-৫২৫৬৭০   </a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: Sanjidanayeem50@gmail.com </a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 10 -->
+            <div class="teacher-card">
+                <img src="tanjina.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম: তানজিনা আক্তার </h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষিকা (ইংরেজি) </p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন: ০১৮১৩-৪০৪৭৩০</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: Tanjinatarin208@gamail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 11 -->
+            <div class="teacher-card">
+                <img src="safim.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">নাম: আইনুল ইসলাম সাফিম</h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষক (বিজ্ঞান) </p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন: ০১৮৯৪-১৭৮৮০৬</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: mshafim75@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 12 -->
+            <div class="teacher-card">
+                <img src="tumpa.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name"> নাম: টুম্পা ধর</h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষিকা (আইসিটি)</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন: ০১৬৮৩-৫৬৮১৮৫</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: Tumpadhar228gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 13 -->
+            <div class="teacher-card">
+                <img src="jule.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name"> নাম: জুলি আক্তার</h3>
+                    <p class="teacher-designation">পদবি: সহকারী শিক্ষিকা (ইংরেজি)</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন: ০১৮৮২৫৭০১৩৭ </a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল: sayemctg@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 14 -->
+            <div class="teacher-card">
+                <img src="images/teacher14.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">শিক্ষকের নাম</h3>
+                    <p class="teacher-designation">পদবি লিখুন</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন নম্বর</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল ঠিকানা</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 15 -->
+            <div class="teacher-card">
+                <img src="images/teacher15.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">শিক্ষকের নাম</h3>
+                    <p class="teacher-designation">পদবি লিখুন</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন নম্বর</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল ঠিকানা</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER 16 -->
+            <div class="teacher-card">
+                <img src="images/teacher16.jpg" alt="শিক্ষকের ছবি" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3 class="teacher-name">শিক্ষকের নাম</h3>
+                    <p class="teacher-designation">পদবি লিখুন</p>
+                    <div class="contact">
+                        <p>📞 <a href="tel:">ফোন নম্বর</a></p>
+                        <p>✉️ <a href="mailto:">ইমেইল ঠিকানা</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    
+<<footer class="site-footer"><div class="container footer-grid">
+  <div><div class="footer-brand">বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</div><p class="small muted"> </p></div>
+  <div><h3>যোগাযোগ:</h3><p>স্কুলের ঠিকানা:বক্তারপাড়া বার-আউলিয়া,সীতাকুণ্ড চট্টগ্রাম</p><p> যোগাযোগ : 01819-626704, 01603-107880</div>
+</div><div class="container footer-bottom"><span>© <span id="year"></span> বার আউলিয়া আইডিয়াল কিন্ডারগার্টেন এন্ড স্কুল</span><span><a href="terms.html">শর্তাবলি</a> · <a href="privacy.html">গোপনীয়তা নীতি</a></span></div></footer>
+<div class="developer-credit">
+    Designed & Developed by
+    <span>Sadekul Islam Shawon</span>
+    <small>Web Designer & Developer</small>
+</div> </body></html>
