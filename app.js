@@ -87,3 +87,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+function openRoutine() {
+  const img = document.querySelector(".routine-image");
+  const box = document.getElementById("routineLightbox");
+  document.getElementById("largeRoutine").src = img.src;
+  box.style.display = "flex";
+}
+
+function closeRoutine() {
+  document.getElementById("routineLightbox").style.display = "none";
+}
+
+function saveRoutine() {
+  const img = document.querySelector(".routine-image");
+
+  fetch(img.src)
+    .then(response => {
+      if (!response.ok) throw new Error("Image not found");
+      return response.blob();
+    })
+    .then(blob => {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Annual-Exam-Routine-2026.jpeg";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+    })
+    .catch(() => {
+      window.open(img.src, "_blank");
+    });
+}
