@@ -541,3 +541,46 @@ footer {
     font-size: 12px;
     margin-top: 4px;
 }
+
+.routine-image {
+  width: 100%;
+  max-width: 700px;
+  cursor: zoom-in;
+  border-radius: 8px;
+}
+
+.routine-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  overflow: auto;
+}
+
+.routine-lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.routine-close {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.routine-download {
+  background: #0d5d4a;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 7px;
+  cursor: pointer;
+}
